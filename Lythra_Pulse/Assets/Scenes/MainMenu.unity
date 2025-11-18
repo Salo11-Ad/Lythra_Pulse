@@ -327,8 +327,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74
-  m_fontSizeBase: 74
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -489,26 +489,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 153876467}
-  - component: {fileID: 153876466}
+  - component: {fileID: 153876468}
   m_Layer: 0
-  m_Name: GameManagement
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &153876466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153876465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6131e5a5927a93c4fb3d03835ac33561, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &153876467
 Transform:
   m_ObjectHideFlags: 0
@@ -524,6 +512,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &153876468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153876465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157841d73c3827c47a9c646f68929d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreditsPanel: {fileID: 1353777471}
+  PausePanel: {fileID: 0}
+  SettingsPanel: {fileID: 1743694589}
+  isPaused: 0
 --- !u!1 &210909585
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,8 +612,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74
-  m_fontSizeBase: 74
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -671,7 +675,7 @@ GameObject:
   - component: {fileID: 297146475}
   - component: {fileID: 297146474}
   m_Layer: 5
-  m_Name: ButtonConfiguration
+  m_Name: Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -694,8 +698,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0924, y: 101}
-  m_SizeDelta: {x: 974.403, y: 413.226}
+  m_AnchoredPosition: {x: 17.010702, y: 76.64419}
+  m_SizeDelta: {x: 882.3912, y: 317.7985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297146474
 MonoBehaviour:
@@ -741,7 +745,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 153876466}
+      - m_Target: {fileID: 153876468}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: SettingsOn
         m_Mode: 1
@@ -825,7 +829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 532, y: 1042}
+  m_AnchoredPosition: {x: 536.52, y: 979.52}
   m_SizeDelta: {x: 1537.377, y: 209.037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301147402
@@ -1130,8 +1134,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74
-  m_fontSizeBase: 74
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1650,7 +1654,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 709932043}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 153876468}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: SettingsOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &709932043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,7 +1787,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 153876466}
+      - m_Target: {fileID: 153876468}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: CreditsOff
         m_Mode: 1
@@ -1995,8 +2011,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.9315186, y: -4.804413}
-  m_SizeDelta: {x: 1471, y: 925}
+  m_AnchoredPosition: {x: 548.49, y: 303.68}
+  m_SizeDelta: {x: 1277.9438, y: 701.0834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1103378749
 MonoBehaviour:
@@ -2049,7 +2065,7 @@ GameObject:
   - component: {fileID: 1192050375}
   - component: {fileID: 1192050374}
   m_Layer: 5
-  m_Name: ButtonJugar
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2072,8 +2088,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 277}
-  m_SizeDelta: {x: 943.3, y: 375.439}
+  m_AnchoredPosition: {x: 18, y: 212}
+  m_SizeDelta: {x: 854.2251, y: 288.7377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1192050374
 MonoBehaviour:
@@ -2119,7 +2135,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 153876466}
+      - m_Target: {fileID: 153876468}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: PlayGame
         m_Mode: 1
@@ -2391,7 +2407,7 @@ GameObject:
   - component: {fileID: 1313008983}
   - component: {fileID: 1313008982}
   m_Layer: 5
-  m_Name: ButtonExit
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2414,8 +2430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0924, y: -272.12}
-  m_SizeDelta: {x: 1035.945, y: 333.008}
+  m_AnchoredPosition: {x: 17.010702, y: -210.31009}
+  m_SizeDelta: {x: 938.1219, y: 256.1054}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313008982
 MonoBehaviour:
@@ -2461,9 +2477,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 153876466}
+      - m_Target: {fileID: 153876465}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: ExitGame
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3330,8 +3346,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74
-  m_fontSizeBase: 74
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3526,7 +3542,7 @@ GameObject:
   - component: {fileID: 1743694592}
   - component: {fileID: 1743694591}
   m_Layer: 5
-  m_Name: PanelConfiguration
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3746,7 +3762,7 @@ GameObject:
   - component: {fileID: 1820907482}
   - component: {fileID: 1820907481}
   m_Layer: 5
-  m_Name: ButtonCredits
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3769,8 +3785,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.728, y: -99}
-  m_SizeDelta: {x: 946.409, y: 333.561}
+  m_AnchoredPosition: {x: 9.684874, y: -74.00003}
+  m_SizeDelta: {x: 926.0912, y: 256.5307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1820907481
 MonoBehaviour:
@@ -3816,7 +3832,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 153876466}
+      - m_Target: {fileID: 153876468}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: CreditsOn
         m_Mode: 1
@@ -4222,7 +4238,7 @@ GameObject:
   - component: {fileID: 1914495443}
   - component: {fileID: 1914495442}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Spanish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
