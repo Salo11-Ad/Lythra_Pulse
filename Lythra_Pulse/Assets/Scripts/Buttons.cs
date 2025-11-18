@@ -2,14 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
-
 public class Buttons : MonoBehaviour
 {
-
     public GameObject CreditsPanel;
     public GameObject PausePanel;
     public GameObject SettingsPanel;
+    public GameObject PanelInstrucciones;   // ← AGREGADO
 
     public bool isPaused = false;
 
@@ -64,14 +62,23 @@ public class Buttons : MonoBehaviour
         SettingsPanel.SetActive(false);
     }
 
+    // ---- INSTRUCCIONES ----
+    public void InstruccionesOn()
+    {
+        PanelInstrucciones.SetActive(true);
+    }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public void InstruccionesOff()
+    {
+        PanelInstrucciones.SetActive(false);
+    }
+    // ------------------------
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
